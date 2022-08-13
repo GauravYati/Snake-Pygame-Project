@@ -6,7 +6,7 @@ import random
 SIZE = 40
 BACKGROUND_COLOR = (0,0,0)
 
-class Apple:
+class Frog:
     def __init__(self, parent_screen):
         self.parent_screen = parent_screen
         self.image = pygame.image.load("C:/Users/gaura/Desktop/Code/Python/Pygame/Image/frog.jpg").convert()
@@ -80,12 +80,12 @@ class Game:
         self.surface = pygame.display.set_mode((1000, 800))
         self.snake = Snake(self.surface)
         self.snake.draw()
-        self.apple = Apple(self.surface)
+        self.apple = Frog(self.surface)
         self.apple.draw()
 
     def reset(self):
         self.snake = Snake(self.surface)
-        self.apple = Apple(self.surface)
+        self.apple = Frog(self.surface)
 
 
     def is_collision(self, x1, y1, x2, y2):
